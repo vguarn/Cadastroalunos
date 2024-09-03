@@ -44,6 +44,7 @@
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Curso = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnAlteracao = new System.Windows.Forms.Button();
+            this.Cidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlunos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -85,7 +86,7 @@
             // btnIncluir
             // 
             this.btnIncluir.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnIncluir.Location = new System.Drawing.Point(265, 111);
+            this.btnIncluir.Location = new System.Drawing.Point(240, 83);
             this.btnIncluir.Name = "btnIncluir";
             this.btnIncluir.Size = new System.Drawing.Size(75, 23);
             this.btnIncluir.TabIndex = 4;
@@ -96,7 +97,7 @@
             // btnRemover
             // 
             this.btnRemover.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnRemover.Location = new System.Drawing.Point(424, 111);
+            this.btnRemover.Location = new System.Drawing.Point(402, 83);
             this.btnRemover.Name = "btnRemover";
             this.btnRemover.Size = new System.Drawing.Size(75, 23);
             this.btnRemover.TabIndex = 5;
@@ -113,8 +114,9 @@
             this.dgvAlunos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAlunos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Nome,
-            this.Curso});
-            this.dgvAlunos.Location = new System.Drawing.Point(208, 157);
+            this.Curso,
+            this.Cidade});
+            this.dgvAlunos.Location = new System.Drawing.Point(207, 112);
             this.dgvAlunos.Name = "dgvAlunos";
             this.dgvAlunos.ReadOnly = true;
             this.dgvAlunos.Size = new System.Drawing.Size(348, 150);
@@ -124,7 +126,7 @@
             // txtAlteracao
             // 
             this.txtAlteracao.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtAlteracao.Location = new System.Drawing.Point(265, 340);
+            this.txtAlteracao.Location = new System.Drawing.Point(269, 284);
             this.txtAlteracao.Name = "txtAlteracao";
             this.txtAlteracao.Size = new System.Drawing.Size(242, 20);
             this.txtAlteracao.TabIndex = 7;
@@ -132,16 +134,17 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(179, 343);
+            this.label3.Location = new System.Drawing.Point(179, 287);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 13);
             this.label3.TabIndex = 8;
             this.label3.Text = "Alterar nome:";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(179, 388);
+            this.label4.Location = new System.Drawing.Point(179, 411);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(83, 13);
             this.label4.TabIndex = 9;
@@ -150,16 +153,15 @@
             // lblTotal
             // 
             this.lblTotal.AutoSize = true;
-            this.lblTotal.Location = new System.Drawing.Point(280, 388);
+            this.lblTotal.Location = new System.Drawing.Point(280, 406);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(35, 13);
+            this.lblTotal.Size = new System.Drawing.Size(0, 13);
             this.lblTotal.TabIndex = 10;
-            this.lblTotal.Text = "label5";
             // 
             // btnTodos
             // 
             this.btnTodos.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnTodos.Location = new System.Drawing.Point(350, 383);
+            this.btnTodos.Location = new System.Drawing.Point(353, 401);
             this.btnTodos.Name = "btnTodos";
             this.btnTodos.Size = new System.Drawing.Size(75, 23);
             this.btnTodos.TabIndex = 11;
@@ -170,7 +172,7 @@
             // btnFechar
             // 
             this.btnFechar.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnFechar.Location = new System.Drawing.Point(480, 383);
+            this.btnFechar.Location = new System.Drawing.Point(480, 401);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(75, 23);
             this.btnFechar.TabIndex = 12;
@@ -192,13 +194,19 @@
             // 
             // btnAlteracao
             // 
-            this.btnAlteracao.Location = new System.Drawing.Point(525, 340);
+            this.btnAlteracao.Location = new System.Drawing.Point(532, 284);
             this.btnAlteracao.Name = "btnAlteracao";
             this.btnAlteracao.Size = new System.Drawing.Size(75, 23);
             this.btnAlteracao.TabIndex = 13;
             this.btnAlteracao.Text = "Alterar";
             this.btnAlteracao.UseVisualStyleBackColor = true;
             this.btnAlteracao.Click += new System.EventHandler(this.btnAlteracao_Click);
+            // 
+            // Cidade
+            // 
+            this.Cidade.HeaderText = "Cidade";
+            this.Cidade.Name = "Cidade";
+            this.Cidade.ReadOnly = true;
             // 
             // Form1
             // 
@@ -246,6 +254,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
         private System.Windows.Forms.DataGridViewTextBoxColumn Curso;
         private System.Windows.Forms.Button btnAlteracao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cidade;
     }
 }
 
